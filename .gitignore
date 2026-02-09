@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+*.pid
+
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Database
+*.db
+*.sqlite
+
+# Test files
+test_*.py
+test_*.png
+test_*.json
+verify_*.py
+list_models*.py
+
+# Internal docs (keep only essential ones)
+*_REPORT.md
+*_GUIDE.md
+*_READY.md
+*_ANALYSIS.md
+*_SUMMARY.md
+*_STATUS.md
