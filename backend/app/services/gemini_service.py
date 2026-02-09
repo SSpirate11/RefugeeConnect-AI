@@ -12,8 +12,11 @@ class GeminiService:
             self.vision_model = None
         else:
             genai.configure(api_key=api_key)
-            self.vision_model = genai.GenerativeModel('gemini-flash-latest')
-            self.reasoning_model = genai.GenerativeModel('gemini-flash-latest')
+            # Use Gemini 3 family models explicitly
+            # Vision/multimodal model for OCR and document analysis
+            self.vision_model = genai.GenerativeModel('gemini-3-pro-vision')
+            # High-capacity reasoning model for equivalency mapping and complex text tasks
+            self.reasoning_model = genai.GenerativeModel('gemini-3-ultra')
 
     async def analyze_credential_image(self, image_path: str):
         if not self.vision_model:

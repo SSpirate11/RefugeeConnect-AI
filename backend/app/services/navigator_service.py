@@ -17,7 +17,8 @@ class NavigatorService:
             self.model = None
         else:
             genai.configure(api_key=api_key)
-            self.model = genai.GenerativeModel('gemini-flash-latest')
+            # Use Gemini 3 flash model for low-latency conversational tasks
+            self.model = genai.GenerativeModel('gemini-3-flash')
 
     async def extract_life_graph(self, conversation_text: str, user_id: str):
         """Extract structured profile from conversational input"""

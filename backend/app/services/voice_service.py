@@ -13,7 +13,8 @@ class VoiceService:
         else:
             try:
                 genai.configure(api_key=api_key)
-                self.model = genai.GenerativeModel('gemini-flash-latest')
+                # Use Gemini 3 flash model for low-latency chat/voice generation
+                self.model = genai.GenerativeModel('gemini-3-flash')
             except Exception as e:
                 print(f"Gemini Config Error: {e}")
                 self.model = None
